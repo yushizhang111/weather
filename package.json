@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start":"pm2-runtime start ecosystem.config.js --env production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js"
   },
@@ -20,12 +21,18 @@
   "homepage": "https://github.com/yushizhang111/weather#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "country-list": "^2.1.0",
     "cross-env": "^5.2.0",
     "dot-env": "0.0.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "helmet": "^3.15.0",
     "morgan": "^1.9.1",
+    "pm2": "^3.2.9",
     "winston": "^3.1.0"
+  },
+  "engines":{
+    "node": "10.x"
   }
 }
